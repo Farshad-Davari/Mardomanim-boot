@@ -17,7 +17,7 @@
 }
 
 .blue-light-bg {
-    background-color: #007AA7;
+    background-color: var(--lighBlue)
 }
 
 .text-dark {
@@ -57,16 +57,42 @@
     --almostWhite: #dbdada;
 }
 
+/* new codes */
 
-/* Navbar Styles */
-#nav-container {
-    border-bottom: 2px solid var(--almostWhite);
+.blue-color{
+    color: #00A7B9;
+}
+.black-color{
+    color: #000 !important;
+}
+#header{
+    background-color: var(--white);
+    border-bottom: 1px solid #C2C2C2;
 }
 
-#nav-logo {
-    margin: 0 15px;
-    border-radius: 13px;
-    padding: 10px 40px;
+#h-100{
+    height: 100%;
+}
+
+#btn_top{
+    text-decoration: none;
+    width: 193px;
+    height: 62px;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 16px;
+    color: #fff;
+    background: #00A7B9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#logo-header{
+    width: 168px;
+    height: auto;
+    cursor: pointer;
 }
 
 /* Menu Styles */
@@ -80,61 +106,86 @@
     border-radius: 25px;
 }
 
-#boxs {
-    border: 1px solid var(--darkBlue);
+#partnerships-2 {
+    border: 1px solid var(--white);
     border-radius: 25px;
 }
 
-/* Profile Styles */
-#profile {
-    background-color: var(--white);
-    margin-right: 250px;
-    margin-top: 25px;
-    border: 1px solid var(--white);
-    border-radius: 15px;
+#boxs {
+    border-radius: 25px;
+    border: none;
 }
 
-#profile-img {
-    border: 5px solid var(--darkBlue);
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
-    position: relative;
+#boxs-2 {
+    border-radius: 25px;
+    border: none;
 }
 
-#profile-img img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    left: 0;
-}
 
-#profile-h2 {
-    font-size: 18px;
-    color: var(--darkBlue);
+.active{
+    background-color: #00A7B9!important;
+    color: white!important;
+    transition: all .3S ease-in;
+}
+.precent{
     font-weight: bold;
 }
 
-#line {
+/* Profile Styles */
+
+#profile_top{
+    background-color: #fff;
+    border-radius: 20px 20px 5px 5px;
+    margin-bottom: 10px;
+}
+
+#box-image-name{
+    margin-top: 20px;
     width: 350px;
-    height: 10px;
-    border-bottom: 3px solid var(--halfBlue);
 }
 
-#profile-info {
-    direction: rtl;
+#pic_profile{
+    width: 134px;
+    height: 134px;
+    border-radius:134px;
+    background: linear-gradient(270deg, #00A7B9 0%, #00A7B9 35%, #00a7b929 100%);
+    object-fit: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
 }
 
-#profile-info #title {
-    color: var(--lighBlue);
+#pic_profile img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+
 }
 
-#profile-info #value {
-    color: var(--darkBlue);
+#name-profile{
+    font-size: 18px;
+    font-weight: 700;
 }
+
+.line_profile{
+    width: 290px;
+    border: 1px solid #CCE4ED ;
+}
+
+#box-info-profile{
+    width: 350px;
+    height: 200px;
+}
+#box-info-profile span{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+
 
 /* Content Styles */
 .post {
@@ -168,6 +219,12 @@
     border-radius: 20px;
     padding-top: 20px;
     direction: rtl;
+
+}
+
+#three{
+    font-weight: bold;
+
 }
 
 .content-post h3{
@@ -177,7 +234,7 @@
 }
   
 .progress-bar{
-    background-color: var(--halfBlue);
+    background-color: var(--halfWhite);
     border-radius: 50px;
     width: calc(100% - 20px);
     height: 20px;
@@ -212,10 +269,12 @@
   
 .total-amount{
     color: var(--gray);
+    font-weight: bold;
 }
 
 #amount {
     color: var(--black);
+    font-weight: bold;
 }
   
 .text-post{
@@ -229,7 +288,7 @@
 }
   
 .btn-post{
-    background-color: var(--lighBlue);
+    background: var(--lighBlue);
     border: none;
     outline: none;
     width: 100%;
@@ -255,8 +314,48 @@
   
 .participation .amount{
     color: var(--lighBlue);
+    font-weight: bold;
 }
+
+
+.btn-post:hover{
+    background-image: linear-gradient(90deg, #00A7B9 0%, #26dce2c9 51%, #00A7B9);
+    animation:slidebg .5s linear infinite;
+ }
 
 .between{
     color: var(--halfgray);
+}
+
+
+@keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+
+
+@media only screen and (min-width:1283px){
+    #profile_top{
+        width: 350px !important;
+        height: 400px !important;
+    }
+}
+
+@media only screen and (max-width: 387px) {
+    #btn_top {
+        width: 130px;
+    }
+    #img-1 {
+        width: 72px;
+    }
+    #img-2 {
+        width: 70px;
+    }
+    #img-3 {
+        width: 50px;
+    }
+    #logo-header {
+        width: 140px !important;
+    }
 }
